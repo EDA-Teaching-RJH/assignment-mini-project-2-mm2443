@@ -9,7 +9,7 @@ def main():
     print("-----------------------------------------------------------------------------------------------------------")
 
     rules = {
-        "Password must start with 'p'": r"^[pP]",
+        "Password must start with 'p'": r"^p.*[A-Z]|^P",
         "Password must end with 'd'": r"[dD]$",
         "Password must contain at least one digit": r"\d",
         "Password must include an uppercase letter": r"[A-Z]"
@@ -18,14 +18,14 @@ def main():
     while True:
         password = input("Enter password: ")
 
-        pattern = r"^p.*\d.*d$"
+        pattern = r"(^p.*[A-Z\d].*[dD]$)|(^P.*\d.*[dD]$)"
         if re.match(pattern, password):
             print("Access granted!")
             break
         else:
             feedback = []
             for hint, rule_pattern in rules.items():
-                if not re.search(rule_pattern, password): 
+                if not re.search(rule_pattern, password):
                     feedback.append(hint)
 
             print("Access denied. Here are some hints:")
@@ -33,4 +33,4 @@ def main():
                 print(f"- {message}")
 
 if __name__ == "__main__":
- main()
+    main()
