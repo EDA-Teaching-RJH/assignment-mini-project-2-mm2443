@@ -1,6 +1,14 @@
 import re
 import cowsay
 
+class User:
+
+    def __init__(self, name, skill_level):
+        self.name = name
+        self.skill_level = skill_level
+
+user = User("BigBaddie99", 2)
+
 rules = {
     "Password must start with 'p'": r"^p.*|^P",
     "Password must end with 'd'": r"[dD]$",
@@ -33,7 +41,7 @@ def main():
             print("Access denied. Here are some hints:")
             for message in feedback:
                 print(f"- {message}")
-    print ("welcome to the super secret database, current user: BigBaddie99")
+    print(f"welcome to the super secret database, current user: {user.name}, clearance level: {user.skill_level}")
     print ("What would you like to acess?")
     import Deets
     
