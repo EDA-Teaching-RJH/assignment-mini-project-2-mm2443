@@ -1,5 +1,5 @@
 import cowsay
-
+# this part moves the story along with a simple if statement user input 
 print ("Nuclear codes | Homework | Darstardly Plans | Destruct-Inator")
 while True:
     Deets = input("")
@@ -10,7 +10,7 @@ while True:
     elif Deets == "Darstardly Plans":
         print("Evil cow")
         cowsay.cow('Mooooahahaha')
-    elif Deets == "Destruct-Inator":
+    elif Deets == "Destruct-Inator": # Phineas and Ferb reference
         print("A local evil mastermind with a very large nose and a hatred for semi aquatic egg laying mamals of action")
         print("has come up with a new invention that may be of interest to us, the Destruct-Inator, we will investigate")
         print("further once the device is fully operational, untill that point we hope he will go far.")
@@ -23,7 +23,7 @@ print("Agent? Are you there, you must be in by now, remember once you have found
 print("prepare to export with the command 'EXPORT'")
 print("are you ready agent?")
 export = input("Type 'yes' to export: ").strip().lower()
-
+# this part shows that i can take a seperate file from outside the program, read and write to this file, as a 'spy' youd need this to escape with the info on a seperate file
 if export == "yes":
     with open('Extraction.txt', 'w') as file:
         file.write('Incriminating evidence')
