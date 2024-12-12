@@ -1,13 +1,20 @@
 import re
 import cowsay
 
-class User:
+class Villains:
 
-    def __init__(self, name, skill_level):
-        self.name = name
-        self.skill_level = skill_level
+    class User:
 
-user = User("BigBaddie99", 2)
+        def __init__(self, name, skill_level):
+            self.name = name
+            self.skill_level = skill_level
+    user = User("BigBaddie99", 2)
+    
+    class Boss:
+        def __innit__(self, name, skill_level):
+            self.name = name
+            self.skill_level = skill_level
+    boss = Boss("DarthBalrog", 999)
 
 rules = {
     "Password must start with 'p'": r"^p.*|^P",
