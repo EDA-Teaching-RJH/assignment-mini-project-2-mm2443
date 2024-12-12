@@ -1,7 +1,7 @@
 import re
 import cowsay
 
-class Villains: #this is my example of the class system, with a superclass of vilains and subclasses showcasing the users and thair 'supervisors'
+class Villains: #this is my example of the class system, with a superclass of villains and subclasses showcasing the users and their 'supervisors'
 
     class User:
 
@@ -16,7 +16,7 @@ class Villains: #this is my example of the class system, with a superclass of vi
             self.skill_level = skill_level
     boss = Boss("DarthBalrog", 999)
 
-rules = { #here is the rules for my example of using regex, it should prompt the user to imput sometheing like P4ssw0rd but can be easily bypassed (hacker style) using P1d 
+rules = { #here is the rules for my example of using regex, it should prompt the user to input something like P4ssw0rd but can be easily bypassed (hacker style) using P1d 
     "Password must start with 'p'": r"^p.*|^P",
     "Password must end with 'd'": r"[dD]$",
     "Password must contain at least one digit": r"\d",
@@ -30,7 +30,7 @@ def validate_password(password): #here is my function to validate the password, 
             feedback.append(hint)
     return feedback
 
-def main(): #this is the main section of code that introduces the user to the task and the theme for this program, a hacker spy expirience.
+def main(): #this is the main section of code that introduces the user to the task and the theme for this program, a hacker spy experience.
     print("Welcome agent, today's mission is a simple one, no exploding cars or airplane dogfights unlike yesterday.")
     print("You will not even have to leave your house. We need you to infiltrate 'the database'")
     print("A super-secret organization with TOP security. No worries for you though,")
@@ -50,8 +50,8 @@ def main(): #this is the main section of code that introduces the user to the ta
                 print(f"- {message}")
     # after the user passes the password puzzle it continues to the next lines of story and launches the deets 'library' that i have created to continue the story seamlessly
     print(f"welcome to the super secret database, current user: {Villains.user.name}, clearance level: {Villains.user.skill_level}")
-    print(f"your current supervisor is {Villains.boss.name}, clearence level:{Villains.boss.skill_level}")
-    print ("What would you like to acess?")
+    print(f"your current supervisor is {Villains.boss.name}, clearance level:{Villains.boss.skill_level}")
+    print ("What would you like to access?")
     import Deets
     
 if __name__ == "__main__":

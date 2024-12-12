@@ -13,5 +13,5 @@ def test_MissingD(): #this one tests to make sure an error comes up and gives th
 def test_MissingInt(): # this one tests to make sure an error comes up and gives the user a hint that they need to use a number
     assert "Password must contain at least one digit" in validate_password("Password")
 
-def test_NoCaps(): # this one makes sure that there is atleast one capital letter within the program
+def test_NoCaps(): # this one makes sure that there is at least one capital letter within the program
     assert "Password must include an uppercase letter" in validate_password("passw0rd")
